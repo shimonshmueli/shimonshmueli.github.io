@@ -371,10 +371,8 @@ main { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--gutter); }
   gap: 18px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-  padding: 4px 0 20px;
-  margin: 0 calc(var(--gutter) * -1);
-  padding-left: var(--gutter);
-  padding-right: var(--gutter);
+  scroll-padding-left: 4px;
+  padding: 4px 4px 20px;
   scrollbar-width: thin;
   scrollbar-color: var(--border-strong) transparent;
 }
