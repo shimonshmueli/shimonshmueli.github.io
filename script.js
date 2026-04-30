@@ -59,6 +59,73 @@
     }
   });
 
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = lightbox ? lightbox.querySelector('.lightbox-img') : null;
+  const lightboxCounter = lightbox ? lightbox.querySelector('.lightbox-counter') : null;
+  const shots = Array.from(document.querySelectorAll('.shot'));
+  let lightboxIndex = -1;
+  let lightboxLastFocus = null;
+
+  function getActiveShots() {
+    return shots.filter((s) => !s.classList.contains('placeholder'));
+  }
+
+  function openLightbox(shotEl) {
+    if (!lightbox || !lightboxImg) return;
+    const active = getActiveShots();
+    const idx = active.indexOf(shotEl);
+    if (idx === -1) return;
+    lightboxIndex = idx;
+    const img = active[idx].querySelector('img');
+    lightboxImg.src = img.currentSrc || img.src;
+    lightboxImg.alt = img.alt || '';
+    if (lightboxCounter) lightboxCounter.textContent = `${idx + 1} / ${active.length}`;
+    lightboxLastFocus = document.activeElement;
+    lightbox.classList.add('is-open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    if (!lightbox) return;
+    lightbox.classList.remove('is-open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    if (lightboxLastFocus && lightboxLastFocus.focus) lightboxLastFocus.focus();
+  }
+
+  function stepLightbox(delta) {
+    const active = getActiveShots();
+    if (!active.length) return;
+    const next = (lightboxIndex + delta + active.length) % active.length;
+    openLightbox(active[next]);
+  }
+
+  shots.forEach((shot) => {
+    shot.addEventListener('click', () => {
+      if (!shot.classList.contains('placeholder')) openLightbox(shot);
+    });
+  });
+
+  if (lightbox) {
+    const closeBtn = lightbox.querySelector('[data-lightbox-close]');
+    const prevBtn = lightbox.querySelector('[data-lightbox-prev]');
+    const nextBtn = lightbox.querySelector('[data-lightbox-next]');
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+    if (prevBtn) prevBtn.addEventListener('click', () => stepLightbox(-1));
+    if (nextBtn) nextBtn.addEventListener('click', () => stepLightbox(1));
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox || !lightbox.classList.contains('is-open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    else if (e.key === 'ArrowLeft') stepLightbox(-1);
+    else if (e.key === 'ArrowRight') stepLightbox(1);
+  });
+
   if (form && status) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
