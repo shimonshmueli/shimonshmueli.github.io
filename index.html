@@ -1,0 +1,234 @@
+<!-- © Shimon Shmueli -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shimon Shmueli</title>
+  <meta name="description" content="Solo developer working at the intersection of audio, hardware, and software." />
+  <meta property="og:title" content="Shimon Shmueli" />
+  <meta property="og:description" content="Solo developer working at the intersection of audio, hardware, and software." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a href="#" class="brand">Shimon Shmueli</a>
+    <nav class="site-nav">
+      <a href="#projects">For My Students</a>
+      <a href="#zonekey">ZoneKey&nbsp;Pro</a>
+      <a href="#" data-open-email>Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="profile-avatar" aria-hidden="true">
+        <img src="assets/profile.jpg" alt="" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+        <span class="initials">SS</span>
+      </div>
+      <h1 class="hero-name">Shimon Shmueli</h1>
+      <p class="hero-bio">
+        Working at the intersection of technology and design. Currently exploring spatial audio, LLM internals, and tools that feel good to use.
+      </p>
+      <div class="hero-actions">
+        <a href="https://www.linkedin.com/in/shimonshmueli/" target="_blank" rel="noopener" class="btn btn-secondary">
+          LinkedIn <span class="arrow">↗</span>
+        </a>
+        <button type="button" class="btn btn-primary" data-open-email>Email me</button>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-head">
+        <h2 class="section-title">For My Students</h2>
+        <p class="section-lead">A sample of tutorials for my students.</p>
+      </div>
+
+      <div class="projects-grid">
+        <a class="project-card" href="https://cheatybang.vercel.app" target="_blank" rel="noopener">
+          <div class="project-shot">
+            <img loading="lazy" alt="CheatyBang screenshot"
+              src="assets/projects/cheatybang.jpg"
+              onerror="this.onerror=null; this.src='https://api.microlink.io/?url=https%3A%2F%2Fcheatybang.vercel.app&screenshot=true&meta=false&embed=screenshot.url';">
+          </div>
+          <div class="project-meta">
+            <h3>CheatyBang</h3>
+            <p>An interactive Claude Code cheat sheet — pick your environment and skill level, get the moves that apply to you.</p>
+            <span class="project-link">cheatybang.vercel.app <span class="arrow">↗</span></span>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://sdt-visualizer.vercel.app" target="_blank" rel="noopener">
+          <div class="project-shot">
+            <img loading="lazy" alt="SDT Visualizer screenshot"
+              src="assets/projects/sdt-visualizer.jpg"
+              onerror="this.onerror=null; this.src='https://api.microlink.io/?url=https%3A%2F%2Fsdt-visualizer.vercel.app&screenshot=true&meta=false&embed=screenshot.url';">
+          </div>
+          <div class="project-meta">
+            <h3>SDT Visualizer</h3>
+            <p>A browser-based visualization of Signal Detection Theory — adjust the parameters and watch the distributions move.</p>
+            <span class="project-link">sdt-visualizer.vercel.app <span class="arrow">↗</span></span>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://mmc-queue.vercel.app" target="_blank" rel="noopener">
+          <div class="project-shot">
+            <img loading="lazy" alt="M/M/c Queues screenshot"
+              src="assets/projects/mmc-queue.jpg"
+              onerror="this.onerror=null; this.src='https://api.microlink.io/?url=https%3A%2F%2Fmmc-queue.vercel.app&screenshot=true&meta=false&embed=screenshot.url';">
+          </div>
+          <div class="project-meta">
+            <h3>M/M/c Queues</h3>
+            <p>An interactive M/M/c queueing simulator. Tune arrival rate, service time, and server count; see the distributions update live.</p>
+            <span class="project-link">mmc-queue.vercel.app <span class="arrow">↗</span></span>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://sensory-playground-6r4f.vercel.app" target="_blank" rel="noopener">
+          <div class="project-shot">
+            <img loading="lazy" alt="Sensory Playground screenshot"
+              src="assets/projects/sensory-playground.jpg"
+              onerror="this.onerror=null; this.src='https://api.microlink.io/?url=https%3A%2F%2Fsensory-playground-6r4f.vercel.app&screenshot=true&meta=false&embed=screenshot.url';">
+          </div>
+          <div class="project-meta">
+            <h3>Sensory Playground</h3>
+            <p>Experiments at the edges of perception — pseudohaptics, head tracking, and other sensory tricks.</p>
+            <span class="project-link">sensory-playground-6r4f.vercel.app <span class="arrow">↗</span></span>
+          </div>
+        </a>
+
+        <a class="project-card" href="https://frontend-sepia-eight-45.vercel.app" target="_blank" rel="noopener">
+          <div class="project-shot">
+            <img loading="lazy" alt="ML and LLM's Intuition screenshot"
+              src="assets/projects/ml-llm-intuition.jpg"
+              onerror="this.onerror=null; this.src='https://api.microlink.io/?url=https%3A%2F%2Ffrontend-sepia-eight-45.vercel.app&screenshot=true&meta=false&embed=screenshot.url';">
+          </div>
+          <div class="project-meta">
+            <h3>ML and LLM's Intuition</h3>
+            <p>My attempt to provide students with a short, non-intimidating tutorial with emphasis on intuition.</p>
+            <span class="project-link">frontend-sepia-eight-45.vercel.app <span class="arrow">↗</span></span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="zonekey" class="section section-zonekey">
+      <div class="zonekey-header">
+        <div class="app-icon">
+          <img src="assets/zonekey/icon.png" alt="" onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+          <span class="app-icon-fallback">ZK</span>
+        </div>
+        <div class="zonekey-titles">
+          <p class="eyebrow">macOS app</p>
+          <h2>ZoneKey Pro</h2>
+          <p class="zonekey-tagline">Find and launch any app instantly with fuzzy search — just start typing.</p>
+        </div>
+      </div>
+
+      <p class="zonekey-desc">
+        Organize your apps with tags, switch between running apps with keyboard shortcuts, and enjoy a clean, distraction-free experience.
+      </p>
+
+      <ul class="features-grid">
+        <li>
+          <h4>Instant Search</h4>
+          <p>Fuzzy and keyword matching finds apps even with partial or misspelled queries.</p>
+        </li>
+        <li>
+          <h4>Smart Tags</h4>
+          <p>Create up to 3 tags to organize your apps — Work, Creative, Social, whatever fits.</p>
+        </li>
+        <li>
+          <h4>App Switcher</h4>
+          <p>View and cycle through running apps with a keyboard shortcut. Exclude any you don't want in the rotation.</p>
+        </li>
+        <li>
+          <h4>Keyboard-first</h4>
+          <p>Arrow keys to navigate, Enter to launch, Escape to dismiss. Hands stay on the keyboard.</p>
+        </li>
+        <li>
+          <h4>Drag &amp; Drop</h4>
+          <p>Drag apps to the Dock, to tags, or between views.</p>
+        </li>
+        <li>
+          <h4>Tag Colors</h4>
+          <p>Color-code tags for quick visual organization.</p>
+        </li>
+        <li>
+          <h4>Export &amp; Import</h4>
+          <p>Take your settings with you — back them up or move between machines.</p>
+        </li>
+      </ul>
+
+      <div class="screenshots-wrap">
+        <p class="screenshots-label">Screenshots</p>
+        <div class="screenshots" role="region" aria-label="ZoneKey Pro screenshots">
+          <figure class="shot"><img src="assets/zonekey/screenshot-1.jpg" alt="ZoneKey Pro screenshot 1" onerror="this.parentElement.classList.add('placeholder');"><figcaption>Drop screenshot-1.png</figcaption></figure>
+          <figure class="shot"><img src="assets/zonekey/screenshot-2.jpg" alt="ZoneKey Pro screenshot 2" onerror="this.parentElement.classList.add('placeholder');"><figcaption>Drop screenshot-2.png</figcaption></figure>
+          <figure class="shot"><img src="assets/zonekey/screenshot-3.jpg" alt="ZoneKey Pro screenshot 3" onerror="this.parentElement.classList.add('placeholder');"><figcaption>Drop screenshot-3.png</figcaption></figure>
+          <figure class="shot"><img src="assets/zonekey/screenshot-4.jpg" alt="ZoneKey Pro screenshot 4" onerror="this.parentElement.classList.add('placeholder');"><figcaption>Drop screenshot-4.png</figcaption></figure>
+          <figure class="shot"><img src="assets/zonekey/screenshot-5.jpg" alt="ZoneKey Pro screenshot 5" onerror="this.parentElement.classList.add('placeholder');"><figcaption>Drop screenshot-5.png</figcaption></figure>
+          <figure class="shot"><img src="assets/zonekey/screenshot-6.jpg" alt="ZoneKey Pro screenshot 6" onerror="this.parentElement.classList.add('placeholder');"><figcaption>Drop screenshot-6.png</figcaption></figure>
+        </div>
+      </div>
+
+      <div class="zonekey-cta">
+        <a href="https://buymeacoffee.com/redshiftinnovations" target="_blank" rel="noopener" class="btn btn-coffee">
+          <span aria-hidden="true">☕</span> Buy me a coffee
+        </a>
+        <p class="cta-note">Like ZoneKey Pro? A small tip keeps the project alive.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Shimon Shmueli</p>
+    <p class="footer-links">
+      <a href="https://www.linkedin.com/in/shimonshmueli/" target="_blank" rel="noopener">LinkedIn</a>
+      <span aria-hidden="true">·</span>
+      <a href="#" data-open-email>Email</a>
+      <span aria-hidden="true">·</span>
+      <a href="https://github.com/shimonshmueli" target="_blank" rel="noopener">GitHub</a>
+    </p>
+  </footer>
+
+  <div class="modal" id="email-modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="email-modal-title">
+      <button type="button" class="modal-close" data-close aria-label="Close">×</button>
+      <h3 id="email-modal-title">Send me a message</h3>
+      <p class="modal-sub">I'll get back to you at the email you provide.</p>
+      <form id="email-form" novalidate>
+        <input type="hidden" name="access_key" value="10fc73ac-4e58-4cb1-9fbd-46b73f50e6c3">
+        <input type="hidden" name="from_name" value="shimonshmueli.github.io">
+        <input type="hidden" name="subject" value="New message from your website">
+        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+
+        <label class="field">
+          <span>Your name</span>
+          <input type="text" name="name" required autocomplete="name">
+        </label>
+        <label class="field">
+          <span>Your email</span>
+          <input type="email" name="email" required autocomplete="email">
+        </label>
+        <label class="field">
+          <span>Message</span>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <div class="form-actions">
+          <button type="button" class="btn btn-secondary" data-close>Cancel</button>
+          <button type="submit" class="btn btn-primary">Send</button>
+        </div>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
