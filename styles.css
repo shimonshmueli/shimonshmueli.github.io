@@ -319,7 +319,6 @@ main { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--gutter); }
   font-size: 18px;
   color: var(--text-muted);
   margin: 0;
-  max-width: 560px;
 }
 
 .zonekey-desc {
