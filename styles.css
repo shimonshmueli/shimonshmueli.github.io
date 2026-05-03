@@ -82,11 +82,11 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 main { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--gutter); }
 
 .section {
-  padding: clamp(48px, 8vw, 88px) 0;
+  padding: clamp(32px, 5vw, 56px) 0;
   border-top: 1px solid var(--border);
 }
 
-.section-head { margin-bottom: 32px; max-width: 640px; }
+.section-head { margin-bottom: 24px; max-width: 640px; }
 .section-title {
   font-family: var(--font-serif);
   font-weight: 400;
@@ -103,12 +103,12 @@ main { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--gutter); }
 
 /* ---------- Hero ---------- */
 .hero {
-  padding: clamp(56px, 10vw, 112px) 0 clamp(40px, 7vw, 72px);
+  padding: clamp(40px, 7vw, 80px) 0 clamp(28px, 5vw, 52px);
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: 18px;
+  gap: 14px;
 }
 
 .profile-avatar {
@@ -270,7 +270,7 @@ main { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--gutter); }
   display: flex;
   gap: 28px;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   flex-wrap: wrap;
 }
 
@@ -322,7 +322,7 @@ main { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--gutter); }
 }
 
 .zonekey-desc {
-  margin: 0 0 28px;
+  margin: 0 0 20px;
   font-size: 17px;
   color: var(--text);
   line-height: 1.65;
@@ -330,11 +330,11 @@ main { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--gutter); }
 
 .features-grid {
   list-style: none;
-  margin: 0 0 40px;
+  margin: 0 0 28px;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 20px 32px;
+  gap: 16px 32px;
 }
 .features-grid li {
   border-top: 1px solid var(--border);
@@ -355,7 +355,7 @@ main { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--gutter); }
 }
 
 /* Screenshots gallery */
-.screenshots-wrap { margin-bottom: 32px; }
+.screenshots-wrap { margin-bottom: 24px; }
 .screenshots-label {
   font-size: 13px;
   text-transform: uppercase;
