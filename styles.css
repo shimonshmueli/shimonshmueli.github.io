@@ -291,10 +291,14 @@ main { max-width: var(--max-w); margin: 0 auto; padding: 0 var(--gutter); }
   margin: 0;
 }
 .zonekey-page-tagline {
-  font-size: clamp(17px, 1.6vw, 19px);
+  font-size: clamp(15px, 1.6vw, 19px);
   color: var(--text-muted);
   margin: 0;
   line-height: 1.55;
+  white-space: nowrap;
+}
+@media (max-width: 720px) {
+  .zonekey-page-tagline { white-space: normal; font-size: 16px; }
 }
 .zonekey-page-buttons { margin-top: 14px; }
 .zonekey-page-hero .cta-note { margin-top: -2px; }
